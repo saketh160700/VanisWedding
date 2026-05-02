@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sai Kumar & Vani Priya Dharshini — A Royal Union</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Great+Vibes&family=Noto+Serif+Devanagari:wght@300;400;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- Traditional Top Decorations -->
+  <div class="toran-decor top-toran"></div>
+  <div class="corner-mandala top-left"></div>
+  <div class="corner-mandala top-right"></div>
+
+  <!-- Loader -->
+  <div id="loader">
+    <svg class="loader-mandala" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="60" cy="60" r="55" stroke="#C9952A" stroke-width="1" stroke-dasharray="4 4" />
+      <circle cx="60" cy="60" r="42" stroke="#C9952A" stroke-width=".7" stroke-dasharray="8 3" />
+      <circle cx="60" cy="60" r="28" stroke="#C9952A" stroke-width="1.2" />
+      <g fill="#C9952A" opacity=".8">
+        <path d="M60,5 C58,15 52,20 60,30 C68,20 62,15 60,5Z" />
+        <path d="M60,115 C62,105 68,100 60,90 C52,100 58,105 60,115Z" />
+        <path d="M5,60 C15,62 20,68 30,60 C20,52 15,58 5,60Z" />
+        <path d="M115,60 C105,58 100,52 90,60 C100,68 105,62 115,60Z" />
+      </g>
+      <g fill="#F0C060" opacity=".6">
+        <path d="M60,5 C58,15 52,20 60,30 C68,20 62,15 60,5Z" transform="rotate(45 60 60)" />
+        <path d="M60,5 C58,15 52,20 60,30 C68,20 62,15 60,5Z" transform="rotate(90 60 60)" />
+        <path d="M60,5 C58,15 52,20 60,30 C68,20 62,15 60,5Z" transform="rotate(135 60 60)" />
+        <path d="M60,5 C58,15 52,20 60,30 C68,20 62,15 60,5Z" transform="rotate(180 60 60)" />
+        <path d="M60,5 C58,15 52,20 60,30 C68,20 62,15 60,5Z" transform="rotate(225 60 60)" />
+        <path d="M60,5 C58,15 52,20 60,30 C68,20 62,15 60,5Z" transform="rotate(270 60 60)" />
+        <path d="M60,5 C58,15 52,20 60,30 C68,20 62,15 60,5Z" transform="rotate(315 60 60)" />
+      </g>
+      <circle cx="60" cy="60" r="8" fill="#C9952A" opacity=".9" />
+    </svg>
+    <div class="loader-text">🙏 Loading a Royal Experience</div>
+  </div>
+
+  <!-- Custom Cursor -->
+  <div id="cursor"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- Canvases -->
+  <canvas id="petals-canvas"></canvas>
+  <canvas id="sparkle-canvas"></canvas>
+
+  <!-- Navigation -->
+  <nav id="nav">
+    <div class="nav-logo">V ♥ S</div>
+    <ul class="nav-links">
+      <li><a href="#couple">Couple</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#venue">Venue</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-border-top"></div>
+
+    <div class="hero-content">
+      <span class="hero-om">ॐ</span>
+      <p class="hero-invite-text">With the blessings of the divine — you are cordially invited</p>
+
+      <h1 class="hero-names">
+        <span class="name-gold">Sai Kumar</span>
+        <span class="hero-ampersand">&</span>
+        <span class="name-gold">Vani Priya Dharshini</span>
+      </h1>
+
+      <div class="hero-divider">
+        <div class="divider-line"></div>
+        <div class="divider-diamond"></div>
+        <div class="divider-line"></div>
+      </div>
+
+      <p class="hero-date">
+        <span>09 May</span> &nbsp;·&nbsp; 2026 &nbsp;·&nbsp; <span>Hyderabad</span>
+      </p>
+
+      <button class="hero-video-btn" onclick="playWeddingVideo()">
+        <span class="play-icon">▶</span>
+        Watch Invitation
+      </button>
+    </div>
+
+    <div class="hero-scroll" onclick="document.getElementById('countdown').scrollIntoView({behavior:'smooth'})">
+      <span>Scroll</span>
+      <div class="scroll-arrow"></div>
+    </div>
+    <div class="hero-border-bottom"></div>
+  </section>
+
+  <!-- COUNTDOWN -->
+  <section id="countdown">
+    <p class="countdown-label">✦ The Celebration Begins In ✦</p>
+    <div class="countdown-grid">
+      <div class="countdown-item"><span class="countdown-num" id="cd-days">00</span><span
+          class="countdown-unit">Days</span></div>
+      <div class="countdown-item"><span class="countdown-num" id="cd-hours">00</span><span
+          class="countdown-unit">Hours</span></div>
+      <div class="countdown-item"><span class="countdown-num" id="cd-mins">00</span><span
+          class="countdown-unit">Minutes</span></div>
+      <div class="countdown-item"><span class="countdown-num" id="cd-secs">00</span><span
+          class="countdown-unit">Seconds</span></div>
+    </div>
+  </section>
+
+  <!-- COUPLE -->
+  <section id="couple">
+    <div class="section-header reveal">
+      <span class="section-tag">✦ The Blessed Union ✦</span>
+      <h2 class="section-title">Meet the Couple</h2>
+      <div class="section-ornament">
+        <div class="line"></div><span style="color:var(--gold);font-size:1.2rem">❀</span>
+        <div class="line"></div>
+      </div>
+    </div>
+    <div class="couple-grid">
+      <div class="couple-card" id="cc1">
+        <div class="couple-img-wrap">
+          <img src="images/img6.jpeg" alt="Groom">
+        </div>
+        <h3 class="couple-name">Sai Kumar</h3>
+        <p class="couple-hindi">साईं कुमार</p>
+        <p class="couple-desc">Only S/o. Smt & Sri Jella Jayalakshmi - Jitesh<br><em>Groom</em></p>
+      </div>
+      <div class="couple-middle">
+        <div class="couple-amp-big">&</div>
+        <svg class="couple-mandala-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="48" fill="none" stroke="#C9952A" stroke-width=".8" />
+          <circle cx="50" cy="50" r="35" fill="none" stroke="#C9952A" stroke-width=".5" />
+          <circle cx="50" cy="50" r="20" fill="none" stroke="#C9952A" stroke-width=".8" />
+          <g fill="#C9952A" opacity=".7">
+            <ellipse cx="50" cy="4" rx="4" ry="9" />
+            <ellipse cx="50" cy="96" rx="4" ry="9" />
+            <ellipse cx="4" cy="50" rx="9" ry="4" />
+            <ellipse cx="96" cy="50" rx="9" ry="4" />
+          </g>
+          <g fill="#F0C060" opacity=".5">
+            <ellipse cx="50" cy="4" rx="4" ry="9" transform="rotate(45 50 50)" />
+            <ellipse cx="50" cy="4" rx="4" ry="9" transform="rotate(90 50 50)" />
+            <ellipse cx="50" cy="4" rx="4" ry="9" transform="rotate(135 50 50)" />
+            <ellipse cx="50" cy="4" rx="4" ry="9" transform="rotate(180 50 50)" />
+            <ellipse cx="50" cy="4" rx="4" ry="9" transform="rotate(225 50 50)" />
+            <ellipse cx="50" cy="4" rx="4" ry="9" transform="rotate(270 50 50)" />
+            <ellipse cx="50" cy="4" rx="4" ry="9" transform="rotate(315 50 50)" />
+          </g>
+          <circle cx="50" cy="50" r="6" fill="#C9952A" />
+        </svg>
+      </div>
+      <div class="couple-card" id="cc2">
+        <div class="couple-img-wrap">
+          <img src="images/Bride.jpeg" alt="Bride">
+        </div>
+        <h3 class="couple-name">Vani Priya Dharshini</h3>
+        <p class="couple-hindi">वाणी प्रियदर्शिनी</p>
+        <p class="couple-desc">Only Daughter of Smt. Dontha Varalakshmi & Sri Dontha Satyanarayana<br><em>Bride</em></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROYAL SCROLL INVITATION -->
+  <section id="invitation-scroll">
+    <div class="section-header reveal">
+      <span class="section-tag">✦ Royal Farman ✦</span>
+      <h2 class="section-title">Unroll the Decree</h2>
+      <div class="section-ornament">
+        <div class="line"></div><span style="color:var(--gold);font-size:1.2rem">❀</span>
+        <div class="line"></div>
+      </div>
+    </div>
+
+    <div class="scroll-wrapper reveal" onclick="this.classList.toggle('open')">
+      <div class="scroll-top-rod">
+        <div class="rod-end left"></div>
+        <div class="rod-end right"></div>
+      </div>
+
+      <div class="scroll-cloth">
+        <div class="scroll-content">
+          <img src="images/card.jpeg" alt="Ganesha"
+            style="width: 45px; height: 45px; object-fit: cover; margin: 0 auto 10px; display: block; border-radius: 5px;">
+          <h3
+            style="color: #8B1A2A; font-family: 'Cinzel Decorative', serif; font-size: 1.2rem; margin-bottom: 8px; text-transform: uppercase; text-align: center; text-shadow: 1px 1px 0 rgba(255,255,255,0.5);">
+            Wedding Invitation</h3>
+          <p
+            style="font-size: 0.85rem; text-align: center; margin-bottom: 15px; line-height: 1.4; color: #4A0810; font-weight: 600;">
+            We solicit your gracious presence with family & friends on the auspicious occasion of the marriage of our
+            only daughter</p>
+          <h4
+            style="color: #6B0F1A; font-size: 1.2rem; margin: 5px 0; text-align: center; font-family: 'Cinzel Decorative', serif;">
+            Chi.La.Sow. Vani Priya Dharshini</h4>
+          <p style="font-size: 0.75rem; text-align: center; margin-bottom: 8px; opacity: 0.9; color: #333;">(Only
+            Daughter of Smt. Dontha Varalakshmi & Sri Dontha Satyanarayana)</p>
+          <p
+            style="text-align: center; font-style: italic; font-size: 1.2rem; margin: 5px 0; color: #C9952A; font-family: 'Cormorant Garamond', serif;">
+            with</p>
+          <h4
+            style="color: #6B0F1A; font-size: 1.2rem; margin: 5px 0; text-align: center; font-family: 'Cinzel Decorative', serif;">
+            Chi. Sai Kumar</h4>
+          <p style="font-size: 0.75rem; text-align: center; margin-bottom: 15px; opacity: 0.9; color: #333;">(Only S/o.
+            Smt & Sri Jella Jayalakshmi - Jitesh)</p>
+          <hr
+            style="width: 80%; border: 0; height: 1.5px; background: linear-gradient(to right, transparent, #C9952A, transparent); margin: 12px 0;">
+          <p style="font-size: 0.85rem; text-align: center; line-height: 1.5; color: #4A0810;">
+            <strong>Sumuhurtham:</strong><br>On Saturday 09th May, 2026 at 08.15 a.m.<br><em>"Mithuna Lagnam"</em>
+          </p>
+          <p style="font-size: 0.85rem; text-align: center; margin: 8px 0; line-height: 1.4; color: #4A0810;">
+            <strong>Venue:</strong> M.N.T. Varahi Banquets, Anand Nagar, Bandlaguda, Nagole, Hyderabad.
+          </p>
+          <p style="font-size: 0.85rem; text-align: center; margin-bottom: 12px; color: #4A0810;">
+            <strong>Lunch:</strong> Follows.
+          </p>
+          <hr
+            style="width: 60%; border: 0; height: 1.5px; background: linear-gradient(to right, transparent, #C9952A, transparent); margin: 10px 0;">
+          <p
+            style="font-size: 0.8rem; text-align: center; font-style: italic; color: #4A0810; font-family: 'Cormorant Garamond', serif; font-weight: 600;">
+            With best compliments from Near & Dear</p>
+        </div>
+      </div>
+
+      <div class="scroll-bottom-rod">
+        <div class="rod-end left"></div>
+        <div class="rod-end right"></div>
+      </div>
+
+      <p class="scroll-hint">Tap to Unroll</p>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery">
+    <div class="section-header reveal">
+      <span class="section-tag">✦ Pre-Wedding Glimpses ✦</span>
+      <h2 class="section-title">Moments of Love</h2>
+      <div class="section-ornament">
+        <div class="line"></div><span style="color:var(--gold);font-size:1.2rem">❀</span>
+        <div class="line"></div>
+      </div>
+    </div>
+    <div class="gallery-grid">
+      <div class="g-item"><img src="images/img1.jpeg" alt="couple">
+        <div class="g-overlay"><span>Our Story</span></div>
+      </div>
+      <div class="g-item"><img src="images/img2.jpeg" alt="engagement">
+        <div class="g-overlay"><span>Engagement</span></div>
+      </div>
+      <div class="g-item"><img src="images/img3.jpeg" alt="mehendi">
+        <div class="g-overlay"><span>Mehendi Night</span></div>
+      </div>
+      <div class="g-item"><img src="images/img4.jpeg" alt="together">
+        <div class="g-overlay"><span>Together Forever</span></div>
+      </div>
+      <div class="g-item"><img src="images/img5.jpeg" alt="tradition">
+        <div class="g-overlay"><span>Rich Traditions</span></div>
+      </div>
+      <div class="g-item"><img src="images/card.jpeg" alt="decoration">
+        <div class="g-overlay"><span>Floral Decor</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div id="lightbox"><span id="lb-close">✕</span><img id="lb-img" src="" alt="" /></div>
+
+  <!-- VENUE -->
+  <section id="venue">
+    <div class="section-header reveal">
+      <span class="section-tag">✦ The Royal Venue ✦</span>
+      <h2 class="section-title">Find Us Here</h2>
+      <div class="section-ornament">
+        <div class="line"></div><span style="color:var(--gold);font-size:1.2rem">❀</span>
+        <div class="line"></div>
+      </div>
+    </div>
+    <div class="venue-grid">
+      <div class="reveal-left">
+        <div class="venue-name">M.N.T. Varahi Banquets</div>
+        <div class="venue-detail">
+          <strong>Address:</strong> Anand Nagar, Bandlaguda, Nagole,<br>
+          Hyderabad, Telangana<br><br>
+          <strong>Wedding Ceremony:</strong> 09 May 2026<br>
+          <strong>Sumuhurtham:</strong> 08:15 AM<br>
+          <strong>Lunch:</strong> Follows<br><br>
+          <strong>With best compliments from:</strong> Near & Dear
+        </div>
+        <a class="btn-directions"
+          href="https://www.google.com/maps/place/MNT+VARAHI+BANQUETS/@17.3207019,78.6252761,16.18z/data=!4m6!3m5!1s0x3bcba1e216d45883:0x8b5c87c5d52d12a5!8m2!3d17.3204049!4d78.6271305!16s%2Fg%2F11n3pj0g0m?entry=ttu&g_ep=EgoyMDI2MDQyOC4wIKXMDSoASAFQAw%3D%3D"
+          target="_blank">📍
+          Get Directions</a>
+      </div>
+      <div class="venue-map reveal-right"
+        onclick="window.open('https://www.google.com/maps/place/MNT+VARAHI+BANQUETS/@17.3207019,78.6252761,16.18z/data=!4m6!3m5!1s0x3bcba1e216d45883:0x8b5c87c5d52d12a5!8m2!3d17.3204049!4d78.6271305!16s%2Fg%2F11n3pj0g0m?entry=ttu&g_ep=EgoyMDI2MDQyOC4wIKXMDSoASAFQAw%3D%3D', '_blank')"
+        style="cursor: pointer;">
+        <div class="venue-map-placeholder">
+          <span class="map-icon">🏰</span>
+          <p>M.N.T. Varahi Banquets<br>Hyderabad</p>
+          <br>
+          <p style="font-size:.75rem; opacity:.5">(Click to view on Google Maps)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLESSINGS -->
+  <section id="blessings">
+    <div class="section-header reveal">
+      <span class="section-tag">✦ Shower Your Love ✦</span>
+      <h2 class="section-title">Blessings</h2>
+      <div class="section-ornament">
+        <div class="line"></div><span style="color:var(--gold);font-size:1.2rem">❀</span>
+        <div class="line"></div>
+      </div>
+    </div>
+
+    <!-- Quotes Carousel / Grid -->
+    <div class="blessings-quotes">
+      <div class="quote-card reveal">
+        <div class="quote-icon">❝</div>
+        <p>"A successful marriage requires falling in love many times, always with the same person."</p>
+      </div>
+      <div class="quote-card reveal" data-delay="150">
+        <div class="quote-icon">❝</div>
+        <p>"जब दो आत्माएँ एक हो जाती हैं, तो उनका मिलन ईश्वर की सबसे बड़ी कृपा होती है।"</p>
+        <span class="quote-sub">— When two souls unite, it is the greatest grace of the Divine —</span>
+      </div>
+      <div class="quote-card reveal" data-delay="300">
+        <div class="quote-icon">❝</div>
+        <p>"Two souls but a single thought, two hearts that beat as one."</p>
+      </div>
+    </div>
+
+    <!-- Guest Blessings Form -->
+    <div class="guest-blessing-box reveal">
+      <h3>Leave a Blessing for the Couple</h3>
+      <div class="form-row">
+        <input type="text" id="b-name" placeholder="Your Name">
+      </div>
+      <div class="form-row">
+        <textarea id="b-msg" placeholder="Write your heartfelt wishes here..."></textarea>
+      </div>
+      <button class="btn-blessing" onclick="submitBlessing()" id="btn-bless">✨ Send Blessings</button>
+      <div class="blessing-success" id="blessing-success">
+        <span class="success-icon">🌸</span>
+        <p>Thank you for your beautiful blessings!</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-names">Sai Kumar ♥ Vani Priya Dharshini</div>
+    <div class="footer-date">09 · May · 2026 · Hyderabad</div>
+    <svg class="footer-mandala" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="50" cy="50" r="48" fill="none" stroke="#C9952A" stroke-width=".8" />
+      <g fill="#C9952A">
+        <ellipse cx="50" cy="4" rx="4" ry="9" />
+        <ellipse cx="50" cy="4" rx="4" ry="9" transform="rotate(45 50 50)" />
+        <ellipse cx="50" cy="4" rx="4" ry="9" transform="rotate(90 50 50)" />
+        <ellipse cx="50" cy="4" rx="4" ry="9" transform="rotate(135 50 50)" />
+        <ellipse cx="50" cy="4" rx="4" ry="9" transform="rotate(180 50 50)" />
+        <ellipse cx="50" cy="4" rx="4" ry="9" transform="rotate(225 50 50)" />
+        <ellipse cx="50" cy="4" rx="4" ry="9" transform="rotate(270 50 50)" />
+        <ellipse cx="50" cy="4" rx="4" ry="9" transform="rotate(315 50 50)" />
+      </g>
+      <circle cx="50" cy="50" r="6" fill="#C9952A" />
+    </svg>
+    <p class="footer-copy">Crafted with ❤️ for a lifetime of togetherness</p>
+  </footer>
+
+  <!-- Background Music -->
+  <audio id="bg-music" loop>
+    <source src="media/BackSong.mp3" type="audio/mpeg">
+  </audio>
+  <button id="music-btn" title="Toggle Music" onclick="toggleMusic()">🎵</button>
+
+  <script src="js/main.js"></script>
+
+  <!-- Video Modal -->
+  <div class="video-modal" id="video-modal">
+    <div class="close-video-btn" onclick="closeWeddingVideo()">×</div>
+    <video id="wedding-vid" controls preload="auto">
+      <source src="media/WeddingInvitationFullVideo.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</body>
+
+</html>
